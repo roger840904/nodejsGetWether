@@ -13,13 +13,10 @@ var rain = function() {
     // 爬完網頁後要做的事情
     var $ = cheerio.load(body);    
     var titleAll = $("tr");
-
     for(var i = 3;i<titleAll.length;i++){   
         var title = $("tr:nth-child("+i+") td:nth-child(11)");
         console.log("時間:"+(i-2)+" , 雨量:"+title.text());
     }
-    
-
   });
 };
 
